@@ -1,0 +1,62 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    top:0px;
+    color:white;
+    font-size: 14px;
+    z-index: 999;/* 设置元素的堆叠顺序,值越高越靠前。*/
+    background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 50%);
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px;
+        height: 70px;
+        .left{
+            display: flex;
+            align-items: center;
+            span{
+                margin-right: 20px;
+                cursor: pointer;
+            }
+            img{
+                margin-right: 40px;
+                height: 25px;
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                object-fit: cover;
+                cursor: pointer;
+            }
+            .icon{
+                margin: 0 15px;
+                cursor: pointer;
+            }
+            .profile{
+                .options{
+                    display: none;
+                    background-color: var(--main-color);
+                    border-radius: 5px;
+                }
+                span{
+                    padding: 10px;
+                    cursor: pointer;
+                }
+                &:hover {
+                    /* &表示上一级选择器,:hover选择器用于选择鼠标指针浮动在上面的元素。 */
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                    }
+                }    
+            }
+        }
+    }
+}

@@ -1,8 +1,10 @@
+import Home from "./home/Home";
+import './app.scss'
 function App() {
   return (
     <div className="App">
     
-         Hello World!
+         <Home />
  
 
     </div>
@@ -10,3 +12,4 @@ function App() {
 }
 
 export default App;
+ 
