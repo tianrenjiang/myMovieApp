@@ -6,6 +6,9 @@
     font-size: 14px;
     z-index: 999;/* 设置元素的堆叠顺序,值越高越靠前。*/
     background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.3) 50%);
+    &.scrolled{
+        background-color: var(--main-color);
+    }
     .container{
         display: flex;
         align-items: center;

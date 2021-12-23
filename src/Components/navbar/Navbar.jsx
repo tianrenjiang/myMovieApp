@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './navbar.scss'
 import netLogo from '../../file/2560px-Netflix_2015_logo.svg.png'
 import Search from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const Navbar = () => {
+    const [isScrolled,setIsScrolled]=useState(false)
+    window.onscroll = () => { //onscroll 事件在元素滚动条在滚动时触发。
+        setIsScrolled(window.pageYOffset===0?false:true)    
+    }
     return (
-        <div className='navbar'>
+        <div className={isScrolled ?"navbar scrolled":"navbar"}>
             <div className="container">
                 <div className="left">
                     <img src={netLogo} 
